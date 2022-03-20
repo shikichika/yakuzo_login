@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${hd.msg}"></h1>
+	<h2 th:text="${hd.msg2}"></h2>
+	<h2 th:text="${hd.msg3}"></h2>
+	<h2 th:text="${hd.msg4}"></h2>
+
+<form action="/login" method="post">
+	<label>社員コード</label>
+	<input type="text" name="shain_code" value="">
+	<label>パスワード</label>
+	<input type="password" name="name" value="">
+	<label>店舗:</label>
+	<select name="tempo_code">
+		<option value="">店舗を選択</option>
+		<option th:each = "map : ${hd.list1}" th:value="${map.torihikisaki_code}" th:text="${map.torihikisaki_name}"></option>
+	</select>
+	<button type="submit">ログイン</button>
+</form>
+
+	<ul>
+		<li th:each = "map : ${hd.list2}"  th:text="${map.torihikisaki_name}"></li>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+h1,h2{
+
+	text-align:center;
+}
+
+.content{
+	background-color:#f3ffd8;
+	padding: 20px;
+	box-sizing: border-bpox;
+}
+
+label{
+	display:block;
+	margin-top:13px;
+	margin-bottom:8px;
+}
+
+button{
+	display:block;
+	margin-top: 13px;
+	margin-bottom: 8px;
+	height: 40px;
+	width: 100%;
+}
+
+button:hover{
+	background-color: #000080;
+}
+
+input{
+	height: 35px;
+	width: 100%;
+	border-style: none;
+	background-color: #f3ffd8;
+	border-bottom: medium solid #000;
+}

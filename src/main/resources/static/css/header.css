@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.header-area{
+	width: 100%;
+	height: 105px;
+	background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174);
+}
+
+.header-area h1{
+	text-align: center;
+}
+
+.user-info{
+	text-align: right;
+	margin-right: 25px;
+}
+
+.user-info span{
+	display: inline-box;
+	background-color: #00ec00;
+}
+
+.user-info label{
+	margin-left: 10px;
+}

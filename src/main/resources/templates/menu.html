@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>薬品在庫管理システム</title>
+<link rel = "stylesheet" href = "css/bootstrap.css">
+<link rel = "stylesheet" href = "css/menu.css">
+</head>
+<body>
+	<div th:replace ="header"></div>
+	<h2>メインメニュー</h2>
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-lg-4 head1">業務メニュー</div>
+			<div class = "col-lg-4 head2">在庫管理メニュー</div>
+			<div class = "col-lg-4 head3">システムメニュー</div>
+
+		</div>
+		<div class = "row">
+			<div class = "col-lg-4 menu">
+			<ul>
+				<li th:each ="map : ${md.gyoumuList}">
+					<a th:href = "${map.menu_uri}" th:text = "${map.menu_name}"></a>
+				</li>
+			</ul>
+			</div>
+			<div class ="col-lg-4 menu">
+			<ul>
+				<li th:each ="map : ${md.stockList}">
+					<a th:href = "${map.menu_uri}" th:text = "${map.menu_name}"></a>
+				</li>
+			</ul>
+			</div>
+			<div class = "col-lg-4 menu">
+			<ul>
+				<li th:each ="map : ${md.systemList}">
+					<a th:href = "${map.menu_uri}" th:text = "${map.menu_name}"></a>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

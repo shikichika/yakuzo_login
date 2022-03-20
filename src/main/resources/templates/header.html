@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "/css/header.css">
+</head>
+<body>
+	<div class ="header-area">
+		<h1>薬在庫管理システム</h1>
+		<div class="user-info">
+			<label>ログイン者：</label>
+			<span th:text = "${session.login_shain_name}"></span>
+			<label>権限：</label>
+			<span th:text = "${session.login_kengen_name}"></span>
+			<label>店舗：</label>
+			<span th:text = "${session.login_tempo_name}"></span>
+			<a href="/menu">メニューに戻る</a>
+
+		</div>
+	</div>
+
+</body>
+</html>
