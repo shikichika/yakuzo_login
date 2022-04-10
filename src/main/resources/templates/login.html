@@ -10,27 +10,25 @@
 	<div class="container">
 		<h1>薬品在庫管理システム</h1>
 		<h2>ログイン</h2>
-		<div class ="col-lg-2">
-
-		</div>
-		<div class ="col-lg-8 content">
-			<form action="putLogin" method="post">
-				<label>社員コード</label>
-				<input type ="text" name="shain_code" th:value="${ld.shain_code}" required>
-				<label>パスワード</label>
-				<input type ="password"  name ="password" th:value="${ld.password}" required>
-				<label>店舗</label>
-				<select name ="tempo_code">
-					<option value="">--店舗を選択	--</option>
-					<option th:each="map: ${ld.tempo_list}" th:selected="${ld.tempo_code} == ${map.torihikisaki_code}"
-					 th:value="${map.torihikisaki_code}" th:text="${map.torihikisaki_name}"></option>
-				</select>
-				<button type ="submit">ログイン</button>
-			</form>
-			<span th:text="${ld.msg}"></span>
-		</div>
-		<div class="col-lg-2">
-
+		<div class = "row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8 content">
+				<form action="putLogin" method="post">
+					<label>社員コード</label> <input type="text" name="shain_code"
+						th:value="${ld.shain_code}" required> <label>パスワード</label>
+					<input type="password" name="password" th:value="${ld.password}"
+						required> <label>店舗</label> <select name="tempo_code">
+						<option value="">--店舗を選択 --</option>
+						<option th:each="map: ${ld.tempo_list}"
+							th:selected="${ld.tempo_code} == ${map.torihikisaki_code}"
+							th:value="${map.torihikisaki_code}"
+							th:text="${map.torihikisaki_name}"></option>
+					</select>
+					<button type="submit">ログイン</button>
+				</form>
+				<span th:text="${ld.msg}"></span>
+			</div>
+			<div class="col-lg-2"></div>
 		</div>
 	</div>
 

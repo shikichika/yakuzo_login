@@ -21,10 +21,15 @@ public class ShainController {
 		return "mst_shain";
 	}
 
-	@PostMapping("/getList")
+	@PostMapping("/dispShinki")
 	public String getList(@ModelAttribute("sd") ShainData sd, Model model) {
 
-		return "shainList";
+		ss.getKengenData(sd);
+		sd.setTitle("社員データ新規作成");
+		sd.setButton("<button onclick = \"registShinki() \">登録</button>");
+		return "operateShain";
 	}
+
+
 
 }

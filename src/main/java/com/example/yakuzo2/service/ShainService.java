@@ -29,16 +29,17 @@ public class ShainService {
 	public String getList(ShainData sd) {
 		sr.getList(sd);
 		StringBuilder html = new StringBuilder();
-		html.append("<table class = 'table table-bordered table-striped>");
+		html.append("<table class = 'table table-bordered table-striped'>");
 		html.append("<tr>");
 		html.append("<th>社員コード</th><th>社員名</th><th>ログインプラグ</th><th>メールアドレス</th>");
 		html.append("<th>権限</th><th>削除フラグ</th><th>編集</th><th>削除</th>");
+		html.append("</tr>");
 		for(Map<String, Object> map : sd.getList()) {
 			html.append("<tr>");
 			html.append("<td>"+map.get("shain_code")+"</td>");
 			html.append("<td>"+map.get("shain_name")+"</td>");
 			html.append("<td>"+map.get("login_flg")+"</td>");
-			html.append("<td>"+map.get("mail.address")+"</td>");
+			html.append("<td>"+map.get("mail_address")+"</td>");
 			html.append("<td>"+map.get("kengen_name")+"</td>");
 			html.append("<td>"+map.get("delete_flg")+"</td>");
 			html.append("<td><button onclick =\"editShain("+map.get("shain_code")+")\">編集</td>");

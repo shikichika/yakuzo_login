@@ -12,9 +12,15 @@ public class ShainRestController {
 	@Autowired
 	ShainService ss;
 
-	@PostMapping("/getList")
+	@PostMapping("/getPages")
 	public int getPages(ShainData sd) {
 		return ss.getPages(sd);
+	}
+
+	@PostMapping("/getList")
+	public String getList(ShainData sd) {
+		return ss.getList(sd);
+
 	}
 
 

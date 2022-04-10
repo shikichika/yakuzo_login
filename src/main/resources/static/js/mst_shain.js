@@ -30,9 +30,9 @@
 					arrData['page'] = page;
 					getList(arrData);
 				}
-			})
+			});
 		}
-	)
+	);
 
 }
 
@@ -41,7 +41,15 @@ function getList(arrData){
 		"/getList",
 		arrData,
 		function(data){
+			//alert(data);
 			document.getElementById("list").innerHTML = data;
 		}
-	)
+	);
+}
+
+function shinki(){
+	//alert("call shinki.js");
+	var form = document.frm;
+	form.action = "/dispShinki";
+	form.submit();
 }
